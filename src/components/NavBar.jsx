@@ -5,8 +5,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/logo192.png" alt="App Logo" className="logo-img" />
-        <span>Mi App</span>
+        <img src="../images/s960_Food.jpeg" alt="App Logo" className="logo-img" />
+        <span>Mi Recipe Food App</span>
       </div>
     </nav>
   );
