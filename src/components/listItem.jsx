@@ -1,33 +1,36 @@
+import { Link } from "react-router-dom";
+
 function ListItem({ item, onDelete }) {
-  // Condición: si tiene menos de 300 calorías → saludable
   const isHealthy = item.calories < 300;
-  const statusIcon = isHealthy ? "✔️" : "❌";
 
   return (
-    <li 
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "10px",
-        border: "1px solid #ccc",
-        marginBottom: "8px",
-        borderRadius: "6px",
-        background: "#f9f9f9"
-      }}
-    >
-      <span>
-        {item.name} — {item.calories} cal — {statusIcon}
-      </span>
+    <li className="list-item">
+      <Link
+        to={`/item/${item.id}`}
+        style={{
+          display: "flex",
+          textDecoration: "none",
+          color: "black",
+          alignItems: "center",
+          flex: 1
+        }}
+      >
+        <img src={item.image} alt={item.name} />
 
-      <button 
+        <div>
+          <div className="list-item-title">{item.name}</div>
+          <div>{item.calories} cal · {isHealthy ? "✔ saludable" : "❌ no saludable"}</div>
+        </div>
+      </Link>
+
+      <button
         onClick={() => onDelete(item.id)}
         style={{
-          background: "red",
-          color: "white",
+          background: "tomato",
           border: "none",
-          padding: "6px 12px",
-          borderRadius: "4px",
+          color: "white",
+          padding: "8px 15px",
+          borderRadius: "8px",
           cursor: "pointer"
         }}
       >
@@ -38,4 +41,6 @@ function ListItem({ item, onDelete }) {
 }
 
 export default ListItem;
+
+
 

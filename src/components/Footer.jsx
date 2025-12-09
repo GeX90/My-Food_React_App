@@ -1,18 +1,7 @@
-import React from "react";
-
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="footer">
-      <a
-        href="https://github.com/tu-usuario/tu-repo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub Repository
-      </a>
-    </footer>
+    <div className="footer">
+      © 2025 - My React App
+    </div>
   );
-};
-
-export default Footer;
+}

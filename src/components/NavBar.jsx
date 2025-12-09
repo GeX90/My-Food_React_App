@@ -1,15 +1,9 @@
-import React from "react";
-
-
-const Navbar = () => {
+export default function NavBar() {
   return (
-    <nav className="navbar">
+    <div className="navbar">
       <div className="logo">
-        <img src="../images/s960_Food.jpeg" alt="App Logo" className="logo-img" />
-        <span>Mi Recipe Food App</span>
+        <span>Mi Aplicación</span>
       </div>
-    </nav>
+    </div>
   );
-};
-
-export default Navbar;
+}

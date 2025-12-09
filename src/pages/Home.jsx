@@ -1,5 +1,7 @@
 import { useState } from "react";
 import List from "../components/list";
+export { initialItems };
+
 
 const initialItems = [
   {
