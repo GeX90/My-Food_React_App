@@ -1,7 +1,8 @@
 import { useState } from "react";
 import List from "../components/list";
 export { initialItems };
-
+import AddItemForm from "../components/AddItemForm";
+import EditItemForm from "../components/EditItemForm";
 
 const initialItems = [
   {
@@ -131,6 +132,9 @@ function Home() {
   return (
     <div>
       <h1>Lista de Alimentos</h1>
+
+      <AddItemForm setItems={setItems} />
+      
       <List items={items} setItems={setItems} />
     </div>
   );
