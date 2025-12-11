@@ -23,10 +23,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
 
-            {/* Página de detalles */}
+            
             <Route path="/item/:id" element={<ItemDetails />} />
 
-            {/* Página no encontrada */}
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
